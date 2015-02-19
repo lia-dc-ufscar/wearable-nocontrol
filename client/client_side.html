@@ -1,0 +1,20 @@
+<head>
+  <title>Wearable Study</title>
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzevId2bOUHbxS-h42OGrQyfWyB96_1yM">
+	</script>
+  <script type="text/javascript" src="oms.min.js"></script>
+</head>
+
+<body>
+  {{#if dataReady}}
+    {{> map}}
+  {{/if}}
+</body>
+
+<template name="map">
+	<div id="map-canvas"></div>
+    {{#each data}}
+      {{addMapMarker}}
+    {{/each}}
+</template>
